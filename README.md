@@ -36,4 +36,4 @@ End product of the "WIUTerian student management system" for Web Technology Cour
 
 Public repo: https://github.com/00017191/StudentManagement.git
 
-Deployed app: 
+Deployed app: https://button-wonderful-babcat.glitch.me/
