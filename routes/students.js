@@ -1,18 +1,9 @@
 const express = require('express')
 const uuid = require('uuid')
-// const axios = require('axios')
+
 const router = express.Router()
 const {readDataFromJson, writeDataIntoJson} = require('./middlewares')
 
-
-//Not worked for some reason when hosted on glitch.com
-// async function searchHN(query) {
-//     const response = await axios.get(
-//       `https://hn.algolia.com/api/v1/search?query=${query}&tags=story&hitsPerPage=90`
-//     );
-//
-//     return response.data;
-//   }
 
 
 //get all students 
