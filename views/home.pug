@@ -1,0 +1,38 @@
+extends index
+
+block content
+  .home-search
+    img(src="/img/wiut.svg" width="580")
+    a.addStud(href='/add-new') Add a new student
+    form(action='/search' method='GET')
+      input.home-input(autofocus='' placeholder='Search student by ID' type='search' name='q')
+
+
+  .container 
+  ul.search-results 
+    each student in students
+      a(href=`/detail/${student.id}`)
+        li.news-article
+          h3.title #{student.first_name} #{student.last_name}
+          .metadata Email: #{student.email} 
+            |
+            </br>
+            span.metadata Student ID:#{student.id}
+            |
+            </br>
+            span.metadata Joined in: #{student.joined_at}
+            |
+            </br>
+            span.metadata Class number: #{student.class_num}
+            |
+            </br>
+            span.metadata Got scholarship: #{student.scholarship}
+            |
+            </br>
+            span.metadata Studying (yes or no): #{student.status}
+            |
+            |
+            </br>
+            time.created-date #{student.joined_at}
+            |
+      

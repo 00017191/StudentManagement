@@ -1,0 +1,39 @@
+extends index
+
+block content
+  header
+    
+    a.logo(href='/') WIUT students management
+    form(action='/search' method='GET')
+      input.search-input(autofocus='' value=`${searchQuery || ''}` placeholder='Enter a student ID' type='search' name='q')
+
+  .container 
+    li.news-article
+        h3.title #{student.first_name} #{student.last_name}
+        .metadata Email: #{student.email} 
+        |
+        </br>
+        span.metadata Student ID:#{student.id}
+        |
+        </br>
+        span.metadata Joined in: #{student.joined_at}
+        |
+        </br>
+        span.metadata Class number: #{student.class_num}
+        |
+        </br>
+        span.metadata Got scholarship: #{student.scholarship}
+        |
+        </br>
+        span.metadata Studying (yes or no): #{student.status}
+        |
+        |
+        </br>
+        time.created-date #{student.joined_at}
+        |
+        |
+        </br>
+        form(method='get' action=`/update-stud/${student.id}`)
+          button(type='submit') Update the student info
+        form(method='POST' action=`/delete/${student.id}?_method=DELETE`)
+          button(type='submit') Delete the student from database
