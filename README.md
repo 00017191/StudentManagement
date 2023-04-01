@@ -34,6 +34,6 @@ End product of the "WIUTerian student management system" for Web Technology Cour
 
 ### Source code publicly available at github.com and app itself hosted on glitch.com
 
-Public repo: 
+Public repo: https://github.com/00017191/StudentManagement.git
 
 Deployed app: 
