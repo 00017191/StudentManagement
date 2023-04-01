@@ -4,7 +4,7 @@
   "description": "Student management system brings light into university management employees to find, search a specific student by parameters",
   "main": "index.js ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
